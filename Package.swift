@@ -5,6 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "Swifw",
+    products: [
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(
+            name: "Swifw",
+            targets: ["Swifw"]),
+    ],
     dependencies: [
         .package(name: "Socket", url: "https://github.com/IBM-Swift/BlueSocket.git", from: "1.0.52"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0")
